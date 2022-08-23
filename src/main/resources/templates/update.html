@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+  <title>Teknologi2</title>
+</head>
+<body>
+<h2>Velkommen til din students program</h2>
+<h5>Her kan du redigere en ny elev</h5>
+
+<div>
+  <form action="/update" method="post">
+    <input th:value="${student.id}" type="number" name="id" hidden>
+    <br>
+    <input th:value="${student.name}" type="text" name="name">
+    <br>
+    <input th:value="${student.age}" type="number" name="age">
+    <br>
+    <input th:value="${student.education}" type="text" name="education">
+    <br>
+    <input type="submit" value="Gem">
+  </form>
+</div>
+
+
+</body>
+</html>
